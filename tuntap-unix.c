@@ -20,14 +20,14 @@
 
 #include <netinet/in.h>
 #include <arpa/inet.h>
-#if defined Linux
+#if defined __linux__
 # include <netinet/ether.h>
 # include <linux/if_tun.h>
 #else
 # include <net/if.h>
-# if defined DragonFly
+# if defined __DragonFly__
 #  include <net/tun/if_tun.h>
-# elif !defined Darwin
+# elif !defined __APPLE__
 #  include <net/if_tun.h>
 # endif
 # include <netinet/in.h>

@@ -27,8 +27,9 @@
 
 void
 tuntap_log_set_cb(t_tuntap_log cb) {
-    if (cb == NULL)
+    if (cb == NULL) {
         tuntap_log = tuntap_log_default;
+    }
 	tuntap_log = cb;
 }
 

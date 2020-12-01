@@ -21,9 +21,9 @@
 
 #include <arpa/inet.h>
 #include <net/if.h>
-#if defined FreeBSD
+#if defined __FreeBSD__ 
 # include <net/if_tun.h>
-#elif defined DragonFly
+#elif defined __DragonFly__
 # include <net/tun/if_tun.h>
 #endif
 #include <net/if_types.h>
@@ -208,7 +208,7 @@ tuntap_sys_set_ipv4(struct device *dev, t_tun_in_addr *s4, uint32_t bits) {
 
 int
 tuntap_sys_set_descr(struct device *dev, const char *descr, size_t len) {
-#if defined FreeBSD
+#if defined __FreeBSD__
 	struct ifreq ifr;
 	struct ifreq_buffer ifrbuf;
 
@@ -225,7 +225,7 @@ tuntap_sys_set_descr(struct device *dev, const char *descr, size_t len) {
 		return -1;
 	}
 	return 0;
-#elif defined DragonFly
+#elif defined __DragonFly__
 	tuntap_log(TUNTAP_LOG_NOTICE,
 	    "Your system does not support tuntap_set_descr()");
 	return -1;
