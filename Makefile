@@ -56,4 +56,10 @@ all: 	$(LIB_OBJS)
 	@echo $(detected_OS)
 clean:
 	rm $(THELIB) $(LIB_OBJS)
+
+check:
+distdir:
+install:
+installcheck:
+uninstall:
 distclean:
