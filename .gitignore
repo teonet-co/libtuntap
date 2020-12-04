@@ -1,0 +1,18 @@
+# build artifacts
+**/*.a
+**/*.la
+**/*.o
+**/*.lo
+**/*.dll
+**/.deps/
+**/.libs/
+**/.dirstamp
+**/build-aux/
+**/m4/
+**/config.h.in
+**/Makefile
+**/Makefile.in
+**/Makefile.in.in
+**/autom4te.cache/
+
+
