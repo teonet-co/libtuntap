@@ -25,6 +25,8 @@
 
 #include "tuntap.h"
 
+TUNTAP_EXPORT t_tuntap_log tuntap_log;
+
 void
 tuntap_log_set_cb(t_tuntap_log cb) {
     if (cb == NULL) {
